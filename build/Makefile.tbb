@@ -16,7 +16,7 @@
 # Define rules for making the TBB shared library.
 #------------------------------------------------------------------------------
 
-tbb_root ?= "$(TBBROOT)"
+tbb_root ?= $(TBBROOT)
 BUILDING_PHASE=1
 include $(tbb_root)/build/common.inc
 CPLUS_FLAGS += $(SDL_FLAGS)

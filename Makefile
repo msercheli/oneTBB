@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-tbb_root?=.
+tbb_root?=${REZ_BUILD_SOURCE_PATH}
 cfg?=release
 include $(tbb_root)/build/common.inc
 .PHONY: default all tbb tbbmalloc tbbproxy test examples
