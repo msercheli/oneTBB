@@ -2,21 +2,12 @@ name = "tbb"
 
 version = "2021.1.0"
 
-authors = [
-    "Intel"
-]
-
-description = \
-    """
-    Intel Threading Blocks
-    """
+authors = ["Intel"]
 
 requires = [
     "gcc",
+    "cmake",
 ]
 
-def pre_build_commands():
-    pass
-
 def commands():
-    pass
+    env.TBB_ROOT = "{root}"
