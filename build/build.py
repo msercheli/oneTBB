@@ -201,4 +201,24 @@ if args.install_python: # Python part
     assert system('python python/setup.py build -b%s build_ext -I%s -L%s install -f'% \
         (paths[2], paths[1], ':'.join(paths[2:]))) == 0
 
+
+# REZ
+if args.install_libs:
+    src_dir = jp(os.environ['REZ_BUILD_PATH'], "lib")
+    dest_dir   = jp(os.environ['REZ_BUILD_INSTALL_PATH'], "lib")
+    if os.path.isdir(src_dir):
+        shutil.copytree(src_dir, dest_dir)
+
+if args.install_devel:
+    src_dir = jp(os.environ['REZ_BUILD_PATH'], "include")
+    dest_dir   = jp(os.environ['REZ_BUILD_INSTALL_PATH'], "include")
+    if os.path.isdir(src_dir):
+        shutil.copytree(src_dir, dest_dir)
+
+    src_dir = jp(os.environ['REZ_BUILD_PATH'], "bin")
+    dest_dir   = jp(os.environ['REZ_BUILD_INSTALL_PATH'], "bin")
+    if os.path.isdir(src_dir):
+        shutil.copytree(src_dir, dest_dir)
+
+
 print("done")

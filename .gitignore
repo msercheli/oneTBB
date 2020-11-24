@@ -3,6 +3,9 @@
 build/*_debug/
 build/*_release/
 
+# REZ
+rezbuild/
+
 # Compiled source #
 ###################
 *.com
