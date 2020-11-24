@@ -11,3 +11,4 @@ requires = [
 
 def commands():
     env.TBB_ROOT = "{root}"
+    env.TBB_LOCATION = "{root}"
